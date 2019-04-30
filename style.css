@@ -1,0 +1,19 @@
+#stage {
+  outline: 1px solid black;
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  
+  transform: translate(-50%, -50%);
+    
+    transition: background-color 1s;
+}
+
+#stage.white {
+    background-color: white;
+}
+
+#stage.black {
+    background-color: black;
+}
