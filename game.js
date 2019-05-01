@@ -218,7 +218,7 @@ Game.entity.extend("switch", "white-switch", {
 
 // Game.tilemap.fromJSON("test", localStorage.getItem("test-level"));
 
-alert(window.top == this);
+alert(window.top.random);
 
 /*
  *
