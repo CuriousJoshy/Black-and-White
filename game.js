@@ -216,7 +216,7 @@ Game.entity.extend("switch", "white-switch", {
  *
  */
 
-Game.tilemap.fromJSON("test", location.search.replace("?level=", ""));
+Game.tilemap.fromJSON("test", decodeURIComponent(location.search.replace("?level=", "")));
 
 /*
  *
