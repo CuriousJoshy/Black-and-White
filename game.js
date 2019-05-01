@@ -163,8 +163,8 @@ Game.entity.extend("game-object", "goal", {
     
     collisionCheck: function(e)
     {
-        if(e.is("Player"))
-            this.world.useMap(`level ${++this.world.level}`);
+//         if(e.is("Player"))
+//             this.world.useMap(`level ${++this.world.level}`);
     }
 });
 
@@ -216,9 +216,7 @@ Game.entity.extend("switch", "white-switch", {
  *
  */
 
-// Game.tilemap.fromJSON("test", localStorage.getItem("test-level"));
-
-alert(window.top.random);
+Game.tilemap.fromJSON("test", location.search.replace("?"));
 
 /*
  *
@@ -227,13 +225,11 @@ alert(window.top.random);
  */
 
 Game.world.add("world", {
-    level: 2,
-    
     enter: function()
     {
         this.add(Game.entity.create("Player"));
         
-        this.useMap(`level ${this.level}`);
+        this.useMap("test");
     },
     
     update: function()
@@ -271,7 +267,7 @@ Game.state.add("start", {
     
     enter: function()
     {
-//         Game.world.enter("world");
+        Game.world.enter("world");
     },
     
     update: function(dt)
