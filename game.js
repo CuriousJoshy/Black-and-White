@@ -216,7 +216,9 @@ Game.entity.extend("switch", "white-switch", {
  *
  */
 
-Game.tilemap.fromJSON("test", localStorage.getItem("test-level"));
+// Game.tilemap.fromJSON("test", localStorage.getItem("test-level"));
+
+alert(window.top == this);
 
 /*
  *
@@ -269,7 +271,7 @@ Game.state.add("start", {
     
     enter: function()
     {
-        Game.world.enter("world");
+//         Game.world.enter("world");
     },
     
     update: function(dt)
